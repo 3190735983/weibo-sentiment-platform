@@ -1,0 +1,29 @@
+# MediaCrawler 简化依赖列表
+# 移除了需要编译的复杂包，保留核心功能
+
+# HTTP和异步
+httpx==0.28.1
+aiofiles==23.2.1
+requests==2.32.3
+
+# Web爬虫核心
+playwright==1.45.0
+parsel==1.9.1
+
+# 数据处理（使用预编译版本）
+pydantic==2.5.2
+python-dotenv==1.0.1
+
+# 数据库（简化）
+aiosqlite==0.21.0
+sqlalchemy>=2.0.0
+
+# 工具
+tenacity==8.2.2
+typer>=0.12.3
+
+# 如果需要这些功能，可以后续单独安装：
+# pandas (需要编译)
+# opencv-python (需要编译)  
+# matplotlib (需要编译)
+# wordcloud (需要编译)

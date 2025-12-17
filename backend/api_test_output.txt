@@ -1,0 +1,70 @@
+﻿======================================================================
+API接口测试
+======================================================================
+
+======================================================================
+测试: 健康检查
+GET /health
+状态码: 200
+响应: {
+  "status": "healthy"
+}
+
+======================================================================
+测试: 获取爬虫状态
+GET /api/crawler/status
+状态码: 200
+响应: {
+  "is_running": false,
+  "mediacrawler_db_exists": false,
+  "posts_count": 121,
+  "status": "ready",
+  "topics_count": 43
+}
+
+======================================================================
+测试: 获取Pipeline状态
+GET /api/pipeline/status
+状态码: 404
+响应: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try agai
+
+======================================================================
+测试: 搜索话题
+POST /api/crawler/search
+状态码: 200
+响应: {
+  "is_new": false,
+  "message": "话题已存在: 测试话题",
+  "status": "success",
+  "topic_id": 44,
+  "topic_name": "测试话题"
+}
+
+======================================================================
+测试: 同步MediaCrawler数据
+POST /api/crawler/sync
+状态码: 400
+响应: {
+  "message": "MediaCrawler数据库不存在，请先运行爬虫",
+  "posts_added": 0,
+  "posts_skipped": 0,
+  "status": "error"
+}
+
+======================================================================
+测试: 运行Pipeline（仅验证）
+POST /api/pipeline/run
+状态码: 404
+响应: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try agai
+
+======================================================================
+测试完成！
+======================================================================

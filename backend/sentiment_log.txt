@@ -1,0 +1,82 @@
+﻿.\venv\Scripts\python.exe :
+ C:\Users\ningji\Desktop\文本
+挖掘\weibo-sentiment-platform
+\backend\run_sentiment_anal
+ysis.py:33: LegacyAPIWarnin
+g: The Query.get() method i
+s considered legacy as of t
+he 1.x series of SQLAlchemy
+ and becomes a legacy const
+ruct in 2.0. The method is 
+now available as Session.ge
+t() (deprecated since: 2.0)
+ (Background on SQLAlchemy 
+2.0 at: https://sqlalche.me
+/e/b8d9)
+所在位置 行:1 字符: 1
++ .\venv\Scripts\python.exe
+ run_sentiment_analysis.py 
+--mode single 2>& ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (C:\  
+  Users\ningji...lche.me   
+ /e/b8d9):String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+  topic = Topic.query.get(t
+opic_id)
+未指定topic_id，使用第一个话题: 人工智能 (ID: 1)
+======================================================================
+情感分析 - 人工智能
+======================================================================
+[SentimentService] Loading model from: C:\Users\ningji\Desktop\文本挖掘\weibo-sentiment-platform\deployed_ml_models\lightgbm_classifier.joblib
+[SentimentService] Model loaded successfully
+
+使用数据清洗服务处理文本
+[INFO] 成功加载 2312 个停用词
+
+找到 37 条微博/评论
+
+开始情感分析...
+
+======================================================================
+分析完成！
+Traceback (most recent call
+ last):
+  File "C:\Users\ningji\Des
+ktop\文本挖掘\weibo-sentiment-p
+latform\backend\run_sentime
+nt_analysis.py", line 203, 
+in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ningji\Des
+ktop\文本挖掘\weibo-sentiment-p
+latform\backend\run_sentime
+nt_analysis.py", line 196, 
+in main
+    analyze_sentiment_for_t
+opic(args.topic_id, use_cle
+aned)
+    ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^
+  File "C:\Users\ningji\Des
+ktop\文本挖掘\weibo-sentiment-p
+latform\backend\run_sentime
+nt_analysis.py", line 104, 
+in analyze_sentiment_for_to
+pic
+    print(f"  \u2705 新分析: {
+analyzed_count} 条")
+    ~~~~~^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' c
+odec can't encode character
+ '\u2705' in position 2: il
+legal multibyte sequence

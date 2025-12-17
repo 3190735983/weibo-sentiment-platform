@@ -1,0 +1,3 @@
+Index 0: 中性
+Index 1: 正面
+Index 2: 负面
