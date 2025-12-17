@@ -156,18 +156,6 @@ VITE_API_BASE_URL=http://localhost:5000
 3. **可选依赖**: pandas、scikit-learn 等需要 C++ 编译器的包已从 requirements.txt 移除，如需使用请单独安装
 4. **AI API**: 如需使用 AI 功能，需要配置 OpenAI 或其他大模型 API Key
 
-## 下一步开发
-
-框架已搭建完成，后续需要实现：
-
-1. 爬虫具体逻辑 (`app/services/crawler_service.py`)
-2. 情感分析模型集成 (`app/services/sentiment_service.py`)
-3. 关键词提取算法完善 (`app/services/keyword_service.py`)
-4. 可视化图表组件开发 (frontend)
-5. AI 模型 API 集成 (`app/services/ai_service.py`)
-
-## 开发团队分工
-
 - **爬虫组**: 实现数据采集模块
 - **数据处理组**: 实现关键词提取和数据预处理
 - **前端开发组**: 完成页面和可视化功能
